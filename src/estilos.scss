@@ -1,0 +1,45 @@
+@import 'animate.css';
+
+#header_principal{
+    height: 54px;
+    background-color: cadetblue;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.links{
+    color: black;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.links:hover{
+    color: yellow;
+    font-size: 25px;
+}
+
+body{
+    background-color: #a8dadc;
+}
+
+h1{
+    color: #1d3557;
+    font-size: 36px;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-left-width: 2px;
+    border-bottom-width: 2px;
+    border-color: #1d3557;
+    text-shadow: 20px 15px 7px;
+    border: solid;
+}
+
+p{
+    font-size: 16px;
+    color: #1d3557;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
