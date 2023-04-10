@@ -1,5 +1,6 @@
 import './estilos.scss'
 import { newTitle } from './app/title/newTitle.js'
+//import 'bootstrap';
 
 function createHeader(){
     let header = document.createElement("header");

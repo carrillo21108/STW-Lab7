@@ -1,10 +1,12 @@
 import '../estilos.scss'
 import { newTitle } from '../app/title/newTitle.js'
 
+var progress_bar = document.getElementById("progress_bar");
+
 function createHeader(){
     let header = document.createElement("header");
     newTitle("Detalle","animate__rubberBand",header);
-    document.body.appendChild(header);
+    document.body.insertBefore(header,progress_bar);
 }
 
 function createDiv1(){
@@ -49,24 +51,7 @@ function createDiv1(){
     let br2 = document.createElement("br");
     div.appendChild(br2);
 
-    document.body.appendChild(div);
-}
-
-function createDiv2(){
-    let div = document.createElement("div");
-    let progress = document.createElement("progress");
-    progress.value = "5";
-    progress.max = "100";
-    div.appendChild(progress);
-
-    let br = document.createElement("br");
-    div.appendChild(br);
-
-    let span = document.createElement("span");
-    span.innerHTML = "5% de progreso en lectura";
-    div.appendChild(span);
-
-    document.body.appendChild(div);
+    document.body.insertBefore(div,progress_bar);
 }
 
 function createFooter(){
@@ -85,7 +70,6 @@ function createFooter(){
 async function createPage(){
     await createHeader()
     await createDiv1()
-    await createDiv2()
     await createFooter()
 }
 

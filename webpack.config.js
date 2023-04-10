@@ -10,7 +10,8 @@ module.exports = {
     libro_detalles:'./src/libro_detalles/libro_detalles.js',
     historia1:'./src/historias/historia1.js',
     historia2:'./src/historias/historia2.js',
-    historia3:'./src/historias/historia3.js'
+    historia3:'./src/historias/historia3.js',
+    progress_bar:'./src/app/webcomponent/progress_bar.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -38,22 +39,26 @@ module.exports = {
     new HtmlWebpackPlugin({
       template:'./src/libro_detalles/libro_detalles.html',
       filename:'libro_detalles/libro_detalles.html',
-      chunks:['libro_detalles']
+      chunks:['libro_detalles','progress_bar']
     }),
     new HtmlWebpackPlugin({
       template:'./src/historias/historia1.html',
       filename:'historias/historia1.html',
-      chunks:['historia1']
+      chunks:['historia1','progress_bar']
     }),
     new HtmlWebpackPlugin({
       template:'./src/historias/historia2.html',
       filename:'historias/historia2.html',
-      chunks:['historia2']
+      chunks:['historia2','progress_bar']
     }),
     new HtmlWebpackPlugin({
       template:'./src/historias/historia3.html',
       filename:'historias/historia3.html',
-      chunks:['historia3']
+      chunks:['historia3','progress_bar']
+    }),
+    new HtmlWebpackPlugin({
+      template:'./src/app/webcomponent/template/progress_bar.html',
+      filename:'template/progress_bar.html'
     })],
   module:{
     rules:[

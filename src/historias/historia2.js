@@ -1,10 +1,12 @@
 import '../estilos.scss'
 import { newTitle } from '../app/title/newTitle.js'
 
+var progress_bar = document.getElementById("progress_bar");
+
 function createHeader(){
     let header = document.createElement("header");
     newTitle("Parte 2","animate__hinge",header);
-    document.body.appendChild(header);
+    document.body.insertBefore(header,progress_bar);
 }
 
 function createFigure(){
@@ -14,7 +16,7 @@ function createFigure(){
     img.alt = "Sala"
 
     figure.appendChild(img);
-    document.body.appendChild(figure);
+    document.body.insertBefore(figure,progress_bar);
 }
 
 function createArticle(){
@@ -45,7 +47,7 @@ function createArticle(){
     figure.appendChild(img);
     article.appendChild(figure);
 
-    document.body.appendChild(article);
+    document.body.insertBefore(article,progress_bar);
 }
 
 function createDiv(){
@@ -83,19 +85,7 @@ function createDiv(){
     let br3 = document.createElement("br");
     div.appendChild(br3);
 
-    let progress = document.createElement("progress");
-    progress.value = "40";
-    progress.max = "100";
-    div.appendChild(progress);
-
-    let br4 = document.createElement("br");
-    div.appendChild(br4);
-
-    let span = document.createElement("span");
-    span.innerHTML = "40% de progreso en lectura";
-    div.appendChild(span);
-
-    document.body.appendChild(div);
+    document.body.insertBefore(div,progress_bar);
 }
 
 function createFooter(){

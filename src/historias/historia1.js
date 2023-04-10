@@ -1,10 +1,12 @@
 import '../estilos.scss'
 import { newTitle } from '../app/title/newTitle.js'
 
+var progress_bar = document.getElementById("progress_bar");
+
 function createHeader(){
     let header = document.createElement("header");
     newTitle("Parte 1","animate__flip",header);
-    document.body.appendChild(header);
+    document.body.insertBefore(header,progress_bar);
 }
 
 function createFigure(){
@@ -14,7 +16,7 @@ function createFigure(){
     img.alt = "Mansion"
 
     figure.appendChild(img);
-    document.body.appendChild(figure);
+    document.body.insertBefore(figure,progress_bar);
 }
 
 function createArticle(){
@@ -31,7 +33,7 @@ function createArticle(){
     p2.innerHTML = "En menos de una hora James se encontraba en la entrada de la mansion. Alrededor de esta no se encuentra nada mas que arboles, por lo que en caso se pierda o quede atrapado, dificilmente podran escuchar sus gritos de auxilio. James se acerca a la puerta y ve que esta no tiene llave.  Aparentemente alguien mas ya la ha abierto.";
     article.appendChild(p2);
 
-    document.body.appendChild(article);
+    document.body.insertBefore(article,progress_bar);
 }
 
 function createDiv(){
@@ -57,19 +59,7 @@ function createDiv(){
     let br3 = document.createElement("br");
     div.appendChild(br3);
 
-    let progress = document.createElement("progress");
-    progress.value = "20";
-    progress.max = "100";
-    div.appendChild(progress);
-
-    let br4 = document.createElement("br");
-    div.appendChild(br4);
-
-    let span = document.createElement("span");
-    span.innerHTML = "20% de progreso en lectura";
-    div.appendChild(span);
-
-    document.body.appendChild(div);
+    document.body.insertBefore(div,progress_bar);
 }
 
 function createFooter(){
