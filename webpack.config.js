@@ -14,7 +14,7 @@ module.exports = {
     progress_bar:'./src/app/webcomponent/progress_bar.js'
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist_con_babel'),
     filename: 'js/[name].bundle.js',
   },
   plugins: [
@@ -71,6 +71,13 @@ module.exports = {
             // Compiles Sass to CSS
             "sass-loader",
           ]
+        },
+        {
+          test: /\.m?js$/,
+          exclude: /node_modules/,
+          use: {
+            loader: 'babel-loader'
+          }
         }
     ]
   }

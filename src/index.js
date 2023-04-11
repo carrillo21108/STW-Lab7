@@ -52,3 +52,9 @@ async function createPage(){
 }
 
 createPage()
+
+const prueba = ()=>{
+    console.log("Ejemplo");
+}
+
+const regex = /(?s:.)./
